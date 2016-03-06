@@ -3,6 +3,15 @@
   <groupId>com.MySQLChatApplication</groupId>
   <artifactId>MySQLChatApplication</artifactId>
   <version>0.0.3-SNAPSHOT</version>
+  <distributionManagement>
+        <repository>
+          <uniqueVersion>false</uniqueVersion>
+          <id>MySQLChatApplication1</id>
+          <name>MySQLChatApplication-Repository</name>
+          <url>https://github.com/dasdingo/MySQLChatApplication/master/releases</url>
+          <layout>default</layout>
+        </repository>
+      </distributionManagement>
   <properties>
   		<jdk.version>1.7</jdk.version>
 		<spring.version>4.1.1.RELEASE</spring.version>
