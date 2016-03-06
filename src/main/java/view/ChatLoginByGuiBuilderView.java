@@ -55,7 +55,7 @@ public class ChatLoginByGuiBuilderView extends JFrame {
 
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				ChatUserListView chatUserList = new ChatUserListView(textFieldLoginUserName.getText());
+				ChatUserListByGuiBuilderView chatUserList = new ChatUserListByGuiBuilderView(textFieldLoginUserName.getText());
 				
 			}
 	

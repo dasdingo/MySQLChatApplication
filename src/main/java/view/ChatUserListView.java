@@ -24,12 +24,12 @@ public class ChatUserListView extends JFrame{
 	JButton button_startChat = new JButton("Start Chat");
 	String disp = "";
 	DBUserService dBUserservice;
-	ChatController controller;
+
 	public ChatUserListView(final String dBUserSender)
 	{
 		super("Userlist");
 		this.setMinimumSize(new Dimension(600, 600));
-		this.controller = controller;
+		
 		List<DBUser> dBUserList = new ArrayList<DBUser>();
 		dBUserservice = new DBUserService();
 		//2. Optional: What happens when the frame closes?
