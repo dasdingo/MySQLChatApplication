@@ -1,19 +1,12 @@
 package main;
 
-import view.ChatLogin;
+import view.ChatLoginByGuiBuilderView;
 
 public class App {
-/*TODO: 
- * 
- * Testcommit
- * {
- * 
- * }
- * 
- * */
+
 	public static void main(String[] args) {
 
-		ChatLogin chatlogin = new ChatLogin();
+		ChatLoginByGuiBuilderView chatlogin = new ChatLoginByGuiBuilderView();
 		
 }
 	
