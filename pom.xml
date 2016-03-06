@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.MySQLChatApplication</groupId>
   <artifactId>MySQLChatApplication</artifactId>
-  <version>0.0.1-SHNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <properties>
   		<jdk.version>1.7</jdk.version>
 		<spring.version>4.1.1.RELEASE</spring.version>
@@ -140,7 +140,7 @@
 	<connection>scm:git:git@github.com:dasdingo/MySQLChatApplication.git</connection>
 	<url>scm:git:git@github.com:dasdingo/MySQLChatApplication.git</url>
 	<developerConnection>scm:git:git@github.com:dasdingo/MySQLChatApplication.git</developerConnection>
-    <tag>MySQLChatApplication_Release_1</tag>
+    <tag>HEAD</tag>
   </scm>
   
 </project>
