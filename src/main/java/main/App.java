@@ -1,12 +1,15 @@
 package main;
 
-import view.ChatLoginByGuiBuilderView;
+import java.awt.EventQueue;
+
+import view.ChatLoginView;
 
 public class App {
 
 	public static void main(String[] args) {
 
-		ChatLoginByGuiBuilderView chatlogin = new ChatLoginByGuiBuilderView();
+		ChatLoginView chatlogin = new ChatLoginView();
+		chatlogin.setVisible(true);
 		
 }
 	
