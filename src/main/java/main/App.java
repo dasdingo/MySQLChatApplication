@@ -8,9 +8,6 @@ public class App {
 	public static void main(String[] args) {
 
 		ChatLoginController chatlogin = new ChatLoginController(new ChatLoginView());
-		
-		
-}
-	
-	
+	}
+
 }

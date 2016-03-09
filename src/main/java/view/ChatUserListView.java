@@ -32,8 +32,7 @@ public class ChatUserListView extends JFrame {
 	 * Create the frame.
 	 */
 	public ChatUserListView() {
-		
-		
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -41,51 +40,44 @@ public class ChatUserListView extends JFrame {
 		setContentPane(contentPane);
 		scrollPane = new JScrollPane();
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		
+
 		btnStartChatButton = new JButton("Chat");
 		btnStartChatButton.setFont(new Font("Tahoma", Font.PLAIN, 64));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 167, GroupLayout.PREFERRED_SIZE)
-							.addGap(18)
-							.addComponent(btnStartChatButton, GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE))
-						.addComponent(lblUserlist))
-					.addContainerGap())
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(lblUserlist)
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(btnStartChatButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-						.addComponent(scrollPane, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
-					.addContainerGap())
-		);
+		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap()
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+										.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 167,
+												GroupLayout.PREFERRED_SIZE)
+										.addGap(18).addComponent(btnStartChatButton, GroupLayout.DEFAULT_SIZE, 219,
+												Short.MAX_VALUE))
+								.addComponent(lblUserlist))
+						.addContainerGap()));
+		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(
+				Alignment.TRAILING,
+				gl_contentPane.createSequentialGroup().addContainerGap().addComponent(lblUserlist).addGap(18)
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+								.addComponent(btnStartChatButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 197,
+										Short.MAX_VALUE)
+								.addComponent(scrollPane, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 197,
+										Short.MAX_VALUE))
+						.addContainerGap()));
 
 		jListUserlist = new JList();
 		scrollPane.setViewportView(jListUserlist);
 		contentPane.setLayout(gl_contentPane);
 	}
-	
-	public void setActionListenerbtnStartChatButton(ActionListener actionListener)
-	{
+
+	public void setActionListenerbtnStartChatButton(ActionListener actionListener) {
 		btnStartChatButton.addActionListener(actionListener);
 	}
-	
-	public void setJListUserlist(Object[]listData)
-	{
+
+	public void setJListUserlist(Object[] listData) {
 		jListUserlist.setListData(listData);
 	}
-	
-	public String getJListUserListSelectedValue()
-	{
+
+	public String getJListUserListSelectedValue() {
 		return jListUserlist.getSelectedValue().toString();
 	}
 }

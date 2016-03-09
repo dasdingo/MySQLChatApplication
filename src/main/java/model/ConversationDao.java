@@ -4,7 +4,7 @@ import java.util.List;
 
 import util.SessionUtil;
 
-public class ConversationDao implements DaoInterface<Conversation, Integer>{
+public class ConversationDao implements DaoInterface<Conversation, Integer> {
 
 	public void persist(Conversation entity) {
 		SessionUtil.getSession().persist(entity);
@@ -25,7 +25,8 @@ public class ConversationDao implements DaoInterface<Conversation, Integer>{
 
 	@SuppressWarnings("unchecked")
 	public List<Conversation> findAll() {
-		List<Conversation> conversationList = (List<Conversation>) SessionUtil.openSession().createQuery("from Conversation").list();
+		List<Conversation> conversationList = (List<Conversation>) SessionUtil.openSession()
+				.createQuery("from Conversation").list();
 		return conversationList;
 	}
 
@@ -36,6 +37,5 @@ public class ConversationDao implements DaoInterface<Conversation, Integer>{
 		}
 
 	}
-
 
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 import util.SessionUtil;
 
-public class ConversationReplyDao implements DaoInterface<ConversationReply, Integer>{
+public class ConversationReplyDao implements DaoInterface<ConversationReply, Integer> {
 
 	public void persist(ConversationReply entity) {
 		SessionUtil.getSession().persist(entity);
@@ -15,7 +15,8 @@ public class ConversationReplyDao implements DaoInterface<ConversationReply, Int
 	}
 
 	public ConversationReply findById(Integer id) {
-		ConversationReply conversationReply = (ConversationReply) SessionUtil.getSession().get(ConversationReply.class, id);
+		ConversationReply conversationReply = (ConversationReply) SessionUtil.getSession().get(ConversationReply.class,
+				id);
 		return conversationReply;
 	}
 
@@ -25,7 +26,8 @@ public class ConversationReplyDao implements DaoInterface<ConversationReply, Int
 
 	@SuppressWarnings("unchecked")
 	public List<ConversationReply> findAll() {
-		List<ConversationReply> conversationReplyList = (List<ConversationReply>) SessionUtil.openSession().createQuery("from ConversationReply").list();
+		List<ConversationReply> conversationReplyList = (List<ConversationReply>) SessionUtil.openSession()
+				.createQuery("from ConversationReply").list();
 		return conversationReplyList;
 	}
 
@@ -35,5 +37,5 @@ public class ConversationReplyDao implements DaoInterface<ConversationReply, Int
 			delete(entity);
 		}
 
-}
+	}
 }

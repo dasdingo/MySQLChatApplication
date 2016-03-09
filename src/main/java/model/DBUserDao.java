@@ -38,7 +38,5 @@ public class DBUserDao implements DaoInterface<DBUser, Integer> {
 		}
 
 	}
-	
-	
 
 }

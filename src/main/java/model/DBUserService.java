@@ -27,24 +27,22 @@ public class DBUserService {
 		SessionUtil.closeSession();
 		return dBUser;
 	}
-	
+
 	public DBUser findByName(String name) {
 		DBUser dBUser = null;
 		Session session = SessionUtil.openSession();
 		@SuppressWarnings("unchecked")
 		List<DBUser> list = (List<DBUser>) session.createQuery("from DBUser").list();
 
-		  
-        for (DBUser m : list) {
-            if(m.getUserName().equals(name))
-            {
-            	 dBUser = m;
-            	 break;
-            }
-            
-        }
-        SessionUtil.closeSession();
-        return dBUser;
+		for (DBUser m : list) {
+			if (m.getUserName().equals(name)) {
+				dBUser = m;
+				break;
+			}
+
+		}
+		SessionUtil.closeSession();
+		return dBUser;
 	}
 
 	public void delete(Integer id) {
@@ -66,28 +64,26 @@ public class DBUserService {
 		dBUserDao.deleteAll();
 		SessionUtil.closeSessionWithTransaction();
 	}
-	
-	public boolean checkUserExists(String DBUser) {
-        boolean exists = false;
-    	Session session = SessionUtil.openSession();
-        @SuppressWarnings("unchecked")
-        List<DBUser> list = (List<DBUser>) session.createQuery("from DBUser").list();
 
-  
-        for (DBUser m : list) {
-            if(m.getUserName().equals(DBUser))
-            {
-            	 exists = true;
-            	 break;
-            }
-        }
-        SessionUtil.closeSession();
-        return exists;
-    }
+	public boolean checkUserExists(String DBUser) {
+		boolean exists = false;
+		Session session = SessionUtil.openSession();
+		@SuppressWarnings("unchecked")
+		List<DBUser> list = (List<DBUser>) session.createQuery("from DBUser").list();
+
+		for (DBUser m : list) {
+			if (m.getUserName().equals(DBUser)) {
+				exists = true;
+				break;
+			}
+		}
+		SessionUtil.closeSession();
+		return exists;
+	}
 
 	public DBUserDao dBUserDao() {
 		return dBUserDao;
-	
-		    }
+
+	}
 
 }

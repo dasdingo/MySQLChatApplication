@@ -90,7 +90,7 @@ public class ConversationService {
 		List<Conversation> list = (List<Conversation>) session.createQuery("from Conversation").list();
 
 		for (Conversation m : list) {
-			if((m.get_userOne().getId() == user1.getId() & m.get_userTwo().getId() == user2.getId())
+			if ((m.get_userOne().getId() == user1.getId() & m.get_userTwo().getId() == user2.getId())
 					| (m.get_userOne().getId() == user2.getId() & m.get_userTwo().getId() == user1.getId())) {
 				exists = true;
 				break;

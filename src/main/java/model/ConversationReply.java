@@ -16,28 +16,30 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import util.SessionUtil;
+
 @Entity
-@Table( name = "conversation_reply")
+@Table(name = "conversation_reply")
 public class ConversationReply {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	@Column(name = "cr_id")
 	private int _id;
-	
-	@Column(name ="reply")
+
+	@Column(name = "reply")
 	private String _reply;
-	
+
 	@Column(name = "time")
 	private double time;
-	
+
 	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "user_id_fk")
 	private DBUser _user_id_fk;
-	
+
 	@OneToOne(cascade = CascadeType.MERGE)
-	@JoinColumn(name ="c_id_fk")
+	@JoinColumn(name = "c_id_fk")
 	private Conversation _c_id_fk;
-	
+
 	public int get_id() {
 		return _id;
 	}
@@ -77,13 +79,11 @@ public class ConversationReply {
 	public void set_c_id_fk(Conversation _c_id_fk) {
 		this._c_id_fk = _c_id_fk;
 	}
-	
-	public ConversationReply()
-	{
-		
+
+	public ConversationReply() {
+
 	}
-	
-	
+
 	public ConversationReply(String _reply, DBUser _user_id_fk, Conversation _c_id_fk) {
 		this._reply = _reply;
 		this._user_id_fk = _user_id_fk;
@@ -91,5 +91,4 @@ public class ConversationReply {
 		this.setTime(new Date().getTime());
 	}
 
-	
 }
