@@ -3,9 +3,15 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.SwingUtilities;
+
 import view.ChatLoginView;
 import view.ChatUserListView;
 
+/**
+ * @author dave
+ *
+ */
 public class ChatLoginController {
 
 	private ChatLoginView _view;
@@ -28,9 +34,15 @@ public class ChatLoginController {
 			 * not possible at all
 			 */
 			if (true) {
-				ChatUserListController chatUserList = new ChatUserListController(new ChatUserListView(),
-						_view.getTextfieldLoginUserName());
-				_view.dispose();
+				SwingUtilities.invokeLater(new Runnable() {
+				      public void run() {
+				    	  ChatUserListController chatUserList = new ChatUserListController(new ChatUserListView(),
+									_view.getTextfieldLoginUserName());
+							_view.dispose();
+				      }
+				});
+				
+				
 			}
 		}
 

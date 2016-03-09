@@ -10,6 +10,10 @@ import model.ConversationService;
 import model.DBUser;
 import model.DBUserService;
 
+/**
+ * @author dave
+ *
+ */
 public class ChatController {
 
 	private DBUser dBUserSender;
@@ -128,9 +132,7 @@ public class ChatController {
 				if (conversationReplyList != null) {
 					for (ConversationReply conversationRep : conversationReplyList) {
 						localCount++;
-						System.out.println("Count: " + count + "  Localcount:" + localCount);
 						if (localCount > count) {
-							System.out.println("somethin added asdasd");
 							conversationReplyListDummy.add(conversationRep);
 							count = localCount;
 						}

@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 public class ChatLoginView extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldLoginUserName;
+	private JTextField textFieldLoginUserName = new JTextField("Schmittwilken");;
 	private JLabel lblUserName = new JLabel("Username: ");
 	private JButton btnLoginButton = new JButton("Login");
 
@@ -29,7 +29,6 @@ public class ChatLoginView extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		textFieldLoginUserName = new JTextField();
 		textFieldLoginUserName.setColumns(10);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
